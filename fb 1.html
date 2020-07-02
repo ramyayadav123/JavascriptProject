@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Feedback Form</title>
+<link rel="stylesheet" type="text/css" href="fb1.css">
+<script type="text/javascript">
+function submitClick()
+{
+	alert("Thanks,Your details have been submitted");
+}
+</script>
+</head>
+<body>
+<h1>Feedback Form</h1>
+<div class="feedback">
+<form method="post" id="feedback" action="res.html">
+<h2>Thanks for visiting!! Please provide feedback</h2>
+<label><b>First Name:</b></label>
+<input type="text" name="fname" id="name" placeholder="Enter your first name:">
+<br>
+<br>
+<label><b>Last Name:</b></label>
+<input type="text" name="lname" id="name" placeholder="Enter your last name:">
+<br>
+<br>
+<label><b>Mobile No:</b></label>
+<input type="number" name="num" id="num" placeholder="Enter your Mobile number:" pattern="[7-9]\\d{9}">
+<br>
+<br>
+
+<label style="font-size:50px"><b>Overall Rating</b></label>
+
+<div class="container">
+<div class="rating-wrapper">
+<input type="radio" name="rating" id="star-1"><label for="star-1"></label>
+<input type="radio" name="rating" id="star-2"><label for="star-2"></label>
+<input type="radio" name="rating" id="star-3"><label for="star-3"></label>
+<input type="radio" name="rating" id="star-4"><label for="star-4"></label>
+<input type="radio" name="rating" id="star-5"><label for="star-5"></label>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</div>
+<br>
+<input type="submit" value="Submit" id="sub" onclick="submitClick()">	
+
+
+</form>
+</div>
+</body>
+</html>

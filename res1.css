@@ -1,0 +1,34 @@
+body
+{
+	font-family:arial;
+	color:white;
+	background:
+	url(img5.jpg)no-repeat;
+	background-size:cover;
+	
+}
+.box
+{
+	width:700px;
+	height:50px;
+	float:center;
+    border:1px solid black;	
+	background-color:lightgray;
+	padding:5px;
+}
+.box ul li
+{
+	width:100px;
+	float:left;
+	text-align:center;
+	
+}	 
+.box ul li a
+{
+	text-decoration:none;
+	color:black;
+	
+
+	}	
+.box ul li:hover{background-color:green;}
+.box ul li a:hover{color:white;}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Feedback</title>
+	<link rel="stylesheet" type="text/css" href="fb1.css">
+	<script src="fb.js"></script>
+</head>
+<body>
+	<div class="fb" >
+		<h3>Experience with Us</h3>
+	        <div class="starrating" id="rate">
+	            <input type="radio" id="star5" onclick="starmark(this)" name="rating" value="5" /><label for="star5" title="Excellent"></label>
+	            <input type="radio" id="star4" onclick="starmark(this)" name="rating" value="4" /><label for="star4" title="Good"></label>
+	            <input type="radio" id="star3" onclick="starmark(this)" name="rating" value="3" /><label for="star3" title="Average"></label>
+	            <input type="radio" id="star2" onclick="starmark(this)" name="rating" value="2" /><label for="star2" title="Bad"></label>
+	            <input type="radio" id="star1" onclick="starmark(this)" name="rating" value="1" /><label for="star1" title="Poor"></label>
+	        </div>
+		<form id="feedback" onsubmit="return validate()">
+        <input type="text" name="name" id="name" placeholder="Your name" required >
+        <span id="messages" style="color:red;"></span>
+		<input type="text" name="num" id="num" placeholder="Your Mobile number:" required>
+		<span id="messages" style="color:red;"></span>
+		<br>
+		<textarea rows="4" cols="28" id="comment" placeholder="Enter your comments..."></textarea>
+		<input type="submit" value="Submit" id="sub">
+		</form>		
+	</div>	
+</body>
+</html> 
+
+

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Restaurant Menu</title>
+<link rel="stylesheet" type="text/css" href="menu1.css">
+<script src="menu1.js">
+</script>
+</head>
+<body>
+    <h1>Restaurant Menu</h2> 
+    <input type="image" src="cart.png" alt="cart" onclick="popup()" width="50" height="50" style="float: right";> 
+
+
+<table id="customers">
+
+ <tr>
+    <td><strong>Food Items</strong></td>
+    <td><strong>Quantity</strong></td>
+    <td><strong>Price</strong></td>
+  </tr>
+  <tr>
+    <th colspan="3"><strong>Veg Starters</strong></th>
+  </tr>
+  <tr>
+    <td>Veg Manchuria</td>
+    <td><input name="qnt_1" type="text" id="qnt_1" value="0" size="3" data-price="100" onkeyup="CalculateItemsValue()" /></td>
+    <td>100</td>
+  </tr>
+  <tr>
+    <td>Aloo Tikka </td>
+    <td><input name="qnt_2" type="text" id="qnt_2" value="0" size="3" data-price="90" onkeyup="CalculateItemsValue()" /></td>
+    <td>90</td>
+  </tr>
+  <tr>
+    <td>Gobi65</td>
+    <td><input name="qnt_3" type="text" id="qnt_3" value="0" size="3" data-price="70" onkeyup="CalculateItemsdata:image/Jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/2wBDAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/wAARCABAAEADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD++4AYHA6Dt7UuB6D8qB0H0H8qWsLvz/r/AIZfcAmFHUD8q8e8B/tDfs//ABU8Q33hH4YfHH4OfEfxZpmnT6xqXhjwF8TPBXjDxFp+kW11Z2Nzqt9ovh7W9R1K0023vdQsLOa+nto7WK6vbS3eVZrmFH/KD/gtZ+0j43+E/wAOvAvwm8K61c+HtH+Muh/EpfGVxY3ENjqHiHRvD9loFpF4Sh1GGR9YstN1W58QeXr0OnW9udZtHt9HvL+TQrvX9Mvv4rLLxP8AEyPxzL408CWPiCHxX4U1PTdb07VfC0Lx6z4ZvtHvIdR0nUtOvLZmbRNT0q+t4b7TZ7G4S5srtbW6tWiKRmT38Dk1PEYOWLxOMWFjJfuXLl5Pj5E6kpSgleasknfbVt2OKriqyxEcPh8NUxM29Y01KU37ql7kYxk3ZO700s/U/wBRPA9B+VGB6D8q/CT/AIItf8FDPiR+074Y8QfAL9oU3t18Yvhn4Us/FfhDxnqWna1Dq/xO+GNrrQ8Ja1feIbqTT5NHuvEPgDxJPoOg33iObWY9V8bWniHTbufTtU1zw/4x8Uat+7leLWpyoVZ0nKM+R2U6clKEl0lGS3TsvNWs0mrHZFuUU3GUG1dxnFxkvJp6p/nutBMD0H5UYHoPyFQT3KwbF2SzTSiXyYIULPK0UMk5UudsFurCPy0nu5re18+SGBp1lniV+S8R+IrHw5b/AG3XblfOCzXmnafai6SBTaWKR3SXlwrLFeRxy3ctx519HaWqQrazx2Ed3YNePzzqRpxlOc1CEVeUpOyil1be2y/A0p06lacaVKE6lSbtGEIuUpPfRK70Sbb2STbsk2doOg+g/lS0g6D6D+VLVEH8mv8AwU68Baz8WP8AgpRb/Cz4n+LrvQdN8VeBtBPwJ0++1OKy0CbSrrwtNBJfQ3ESXsVj/afj3TPF2hTQ6jHbapc6xYLdwwXGnpoYm5H4P/Cvw78DLTxB8E9A8P8Aw68SfHJ7PVpv7L0S01LU4NNvLIzPJcaz4h8T6mln4l8TAxNFeaNolwBo+owPYPOL+6ijH9L/AO03+yV8HP2sfDWg6L8T9L1O18QeCdVk8RfDT4k+ENUn8N/Eb4ZeJmSEDXPB3iW0DSW7ma10+8utH1O31Pw5qWoaRoeo6no15f6Fo1zYflh8Y7Hw7+zvB4kuNCs3X4xeFdOk0HxtqvhMQ6p4gXRrXQJfGGiweB9M8RQ6xbadBrOp32ha7o+kWel3lhbX92bO7sdQv4NTs5fnOOcxxVTA4CmliJ4SNOnhnQo2hSjjKc17CpXkrv6vVg0qi9yXPBx9oozP1rwkWBhjsao08JDM06lZV8RKXtJ5fOg/rCwyu+XE0alNck7VI3r05OhKUFf4r+BVr8SPgt/ZXxW8S+INBtfix4J1bUtc8KxXxt557N7uG8t/FOiX0K2qSx+EfF9nNN4f8TaNpDabp4htzf8Ah238N6/pXh650H+m/wCGPxHsPip8K/A3xOsBDo2k+OfA+h+Lg32+G6OjnW9EstUms1ubiygilfRJrm6sb241CysXjvNOlFxpSI7pF/H/APGDwrc/C/WfEmo/E/x/4/0ie80vWfFXjvW72/l0XwdqXifUdFt4G0vQ9FKaiNcuoo0ibUb7bHpthe3v2LSr7WLLT9H1RfjDwb/wUb/bB+D37LXwvs/ht8W7/wAL+EPBUvikWfgjUPC3w91zQNTtfGvxJ1/XTr+sf2x4R1O+1+5vJPGU32jR/EOrXfhgaZbaa+m6bpet295c6wuHq1arGt7XF0q0cRVovCunTlTw0J1YzvSpSSk5QXJHVK/vRlKK57k8f5NRdbDRyzL61PEYHA46vmCnifruMqYXBulUnisTyRdpwhUqym1KVKMaNfkqyhRbX95K+J/+Egup7Xwtpl5/YtxcW13rPiuKWPRoLxre90+y1C0sp5La81e+1UWFnc6TMI9JtzGun3mmR+JPD+q2GnyNx3xC+K3hL4eeHE8U/ELxN4d0OLSdKPm3+rarZeFtIvb+ZEiubq2stZ12fT9Pju5IQ1vJqOq37aLYT3AudYjt21Kef+FTxb/wU3/bZ+Lc1zrPjT9oz4jh9c0G30rUfDvhHUx4K8JS6Hqcl3YvFdeEfB50HwvcyG3j1Y61dy6RLPd2dr5N82oQzR2q/Gev+JPE+r32vXWv64+o2c1xaXMdgNTuxqUmnS2mnrbxXlqbkpcQanqNrqtnjUoZoL6ea4uEkknFwi+xj+HcfmVOWHxGaUsNhpSi5UsHhpznNR15JYipVpe7K95L2UkrJdLv8ooY6nQm5rDSqS15XVqqMY3ildQpwnzNa6Ocd330/wBPodB9B/KuQ8V+OdC8IRFb+Se81WTT77U7Lw/pccdzrN9Z6cIlur0xzTW1lpGi29zc2NlqHirxHfaL4Q0O51HT/wDhIPEGkwXUc58x1bxZ8RPGdzcaV4CtJPDFrZySwXN/drpR8Ui8TQ/EerafFq/9rWeuaH8MtM1OaD4f3EU2o+GPil8RpdD8bT2+t/B3wE1tb+LYObt/FngfwxaaTJoUfifx7eeMZIj4YOi3Meo3Wt6zHaaLpMkL/wDCT6pINZ8W+DrX4e2Wo6t4j+LWqan4n8MSQX2m6frUWl2+saB4f7J8tOEqlSShGKvJvaK7v/gXeqsugv12JNd8V+ONY165stT1a08DaHY3qeINKSKLU7JZ9D8K+K9R0XWG8Y3txqHhvxVqsV7NaaTeWGneE4fCOhy6nqXh62sfFPxw+HGseLjpng3xm+GfwV8ZfDDyPiLo9j4d+DngLT7PR9X8W69p9j4b8aX1loWp6BdWd94E1Xw9H4autD0FNI06cWWi/D2707QLvTNUvfCen+BdUjiPgqP1u3+G3in4jRLqHxau9Gvdcht49R8O/Dl7NvE3grwJqEcb2ltN4rur+8u28Yard6c95o2sRWM+j2lzpuueKNFgvvEBhs/GsPzX/wAFNrrV9b/YC+NGr+GlnuNXtLfQbfX2ubKGK70620z4k6JY+IoHss3NlLpPhrWLJL/VorfVGsLzRPD8t/FrOvQxW51PwamcUMTVpYHDyhGOJxFLDzxdS14wrSjG1KlL3ZSmrqMqnuxs24yR0wp1qUo11KrCdJe0jGlpO/2ZucWpU7bxa1lsk7px/n7v/wBk7w1+258WfGPhq4+Ovx81vwN8Ol8Pa74F074k6lpV3ceKPhx4q1LXH0+4vrWHTfDOrWOuaHYWtho/jDQ9Q0GWTRb3UNGv11x38RzeGvD/AMP/APBR74b/AAz+Gy6l+z/8MPElvr3i8yeC/Dlz4ej1aw2+A08P3mneP/EPibxDLpNhd3f2q+t28EeHdM8K65fabO9zqNz4i0231i2s9XGkSeBf2nviJ8LPiV4R+O2gG/fx5pVw0mptcX32g+JdEltrNrrwN4xsVtrePX9F8WeH7eKbWkcC/s/E2hQazpU1j4z0nQr+18U+L2v+CfiN8cPiF8YfBuk2ejWHxS8YeIfHsuk20lvcapo+o+JdY1TxT4i03xJcW9jpYuL+x8Y694mtbK/NqZNZ8MW/hvVra4n0q9tZTnheHcyw3ENKdfGSnksMKpYLDUo04U6WM5qbqwnyU6bbSpurTlypzVWpH3eRt/u+I494b/1e40xvDGRUMPj63tMnoV80xeIqZwsozuhjMpqZtOk8ViY4ipDLqtbBV6H1mrhMvx2ZYXEU4znDCyXhem6U8Guwmd/9GXR9FgCSNuaeX7f4i0q+ExTc8/lPq1rOhG752hlDBY1c+W+LfGcWheJfCmp6tq4sdFn1Cbwrr81zZm6SO5ga8uvD19dW9uIzppd9Q1FNWuyJrOC9tLaaOGGwdNRh9r1MxQra3ccQFwt1eWD8ZZbXVJ4LmXaVl3xJHPapKQ6qsnlTxYUMJR8EfFjU4tU8Z+MvCTIGtr+5Wazddpax1KBIzbzQLHCGjeLYlucY8xIredixghEf3NepyRjyvW6vbs9tf6+Z/OSinJrWy7/Ja29dPl6H+oVF8SvFHjyy13SPhMyeCPh54MsPKtfihrfhyXwx8P8AStGj1ZNNjh8I6CXs4/EVv4G8HaJfrdwt4hsLKLVrq7vruPwXPpvhfQJ/dvAvgPQPDtxN4h8PaqnilPFtlfazc+OLu50S+1O9m1q6t9Rju9Iu9I0W2s30bV9P/s6Fo7G8ttIjtPC/hy4g02/1C91XV5Niw0S0sdOjs7y10vTvDNnp1lpekeFrCzitrCxtI4fJWzeG3ZdPNrHbrBYWmlWtuun2kEFxma+gnt1sdK/1D7Q223nAt9qhdqncJAAf3ozk7SVZVRtpUpuO/IX8Xx/EOJzN1oNU4UVO9FQm24qF4ypQu1CtKTcXOok40+X3ZTtyHvYXAqDhzVJVqrsqlVwUYX91rlir2jF81ot66bvV6v2tEjEWzY2xd+GaTcSp3ASuqM4JVhvYCUrtZkTdtPzX8StN8N6Dc+LL7xtP/anwu+MNvYfDv4jaFrM1rb+H9NPiGxj8EaJcRrZNps/2TxfNqkfg3xReXP8AbGuXU+qeECNS0jwv4VkitPWbrXrKyRpdQuobRUkihLXMyxJ5s8scNugklZVD3E0sUUCFg0skiJGrMyg+BeOPFCePJ5PAdhZ3EsV5PPaapE62VxBdQxXgg8uRYru6hntb4RSxpZ30dvCy3CT3zOmm32g6j5WHqzqVYRjzbxUrXvCKcfevbSUZKMlJ/aUdz6SjgadKEuazTV3zK/Ntfmu9U9U3pZNqNlZr+Mz9q7wv4t/Zt8VeNfgbZ6p4qvrLVruw03WfEWo3F9a6f8S9I8OeJ5Jrf4kSaX4W1Kx8Irb6tJDean4a0PUX8VXPg/xJdzJBNFNomrJp3wnLrkhv9DgewujDFHqEcmqpqiyafFLK0Uul+ZpPmix0s35e8xqESpNqOqo9hdyXiw6c1v8A19/8FfP2Hz46/Z5s/jb4KjE3j74N6c0nivSLdL+4fX/h3LdQ3N4LC3t4Z7VW8GX0t94gunmi022Hhi/8S6pqmou2h6ZZ3H8fJMGm3Tw3Uks2RM7Q2zyzgSPIYJ4pXihWK5b7HIzxnzW+yXSNLFcxSSmO6/acpxCxuHp1OeHt3ySxLTi28RCnCHtJJN8spxhBpaWjaKXKkj5bMMXW9u7qmqEaM8JRjSw2GwsZYaU5TUZRoUaUK04VJuqqtWM6jqxjUc3KKafLcwT2n2mcRLbQxXVwzSMdgKSNKzb/ADfJJVFmUtumMu2ZSFLuW/NzxFr6TeNdZ8ROVfzJ55YXVgYsbmWOUZHyEqAWwF2Egr5YAjX7B+M2q6hYeGbbQNIilj1DxDcC1jUnyF8pLdpJXOA6sSzRrG6S+TGWLGMB8xfCk3hzUmC3VxHN5QeRDG0chO6LduaWFgBJ5kozDG3mBwMssiqyV04nm5oxWrhZyf8AeaVl6JWt6u55NO3vSk9Xp66ry7r/AC1P/9k=Value()" /></td>
+    <td>70</td>
+  </tr>
+  <tr>
+    <th colspan="3"><strong>Soups</strong></th>
+  </tr>
+  <tr>
+    <td>Tomato Soup</td>
+    <td><input name="qnt_1" type="text" id="qnt_4" value="0" size="3" data-price="80" onkeyup="CalculateItemsValue()" /></td>
+    <td>80</td>
+  </tr>
+  <tr>
+    <td>SweetCorn Soup</td>
+    <td><input name="qnt_2" type="text" id="qnt_5" value="0" size="3" data-price="50" onkeyup="CalculateItemsValue()" /></td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Veg Manchurian Soup</td>
+    <td><input name="qnt_3" type="text" id="qnt_6" value="0" size="3" data-price="110" onkeyup="CalculateItemsValue()" /></td>
+    <td>110</td>
+  </tr>
+  <tr>
+    <th colspan="3"><strong>Main Course</strong></th>
+  </tr>
+  <tr>
+    <td>Veg Biryani</td>
+    <td><input name="qnt_1" type="text" id="qnt_7" value="0" size="3" data-price="150" onkeyup="CalculateItemsValue()" /></td>
+    <td>150</td>
+  </tr>
+  <tr>
+    <td>Veg Fried Rice</td>
+    <td><input name="qnt_2" type="text" id="qnt_8" value="0" size="3" data-price="100" onkeyup="CalculateItemsValue()" /></td>
+    <td>100</td>
+  </tr>
+  <tr>
+    <td>Curd Rice</td>
+    <td><input name="qnt_3" type="text" id="qnt_9" value="0" size="3" data-price="70" onkeyup="CalculateItemsValue()" /></td>
+    <td>70</td>
+  </tr>
+   <tr>
+    <th colspan="3"><strong>Deserts</strong></th>
+  </tr>
+  <tr>
+    <td>Rasmalai</td>
+    <td><input name="qnt_1" type="text" id="qnt_10" value="0" size="3" data-price="50" onkeyup="CalculateItemsValue()" /></td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Gulab Jamun</td>
+    <td><input name="qnt_2" type="text" id="qnt_11" value="0" size="3" data-price="70" onkeyup="CalculateItemsValue()" /></td>
+    <td>70</td>
+  </tr>
+  <tr>
+    <td>Fruit Salad</td>
+    <td><input name="qnt_3" type="text" id="qnt_12" value="0" size="3" data-price="100" onkeyup="CalculateItemsValue()" /></td>
+    <td>100</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td><strong>Item(s) SubTotal:</strong></td>
+    <td ><strong><div id="ItemsTotal">0</div></strong></td>
+  </tr>
+   
+</table>
+
+</body>
+</html>  

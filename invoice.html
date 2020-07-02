@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>invoice</title>
+	<link rel="stylesheet" type="text/css" href="invoice.css">
+	<script src="invoice.js"></script>
+</head>
+<body onload = "CalculateItems()">
+  <h2>Invoice Generated</h2>
+<table>
+  <tr>
+    <td><strong>Item(s) SubTotal:</strong></td>
+    <td ><strong><div id="ItemsTotal">0</div></strong></td>
+  </tr>
+  <tr>
+    <td>Service:</td>
+    <td ><div id="serv">0</div></td>
+  </tr>
+  <tr>
+    <td>Total before tax:</td>
+    <td><div id="beftax">0</div></td>
+  </tr>
+  <tr>
+    <td>Estimated tax to be collected:</td>
+    <td><div id="tax">0</div></td>
+  </tr>
+  <tr>
+    <td><strong>Grand total:</strong></td>
+    <td><strong><div id="tot">0</div></strong></td>
+  </tr>
+
+  </table>
+</body> 
+</html>
